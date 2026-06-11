@@ -1098,6 +1098,42 @@ body.on-light #lang-switch a:hover {
 }
 
 
+
+#lang-switch a {
+  color: var(--mist);
+  text-decoration: none;
+  transition: color .25s;
+  cursor: pointer;
+}
+#lang-switch a.active {
+  color: var(--river-glow);
+  font-weight: bold;
+}
+#lang-switch a:hover {
+  color: var(--river-glow);
+}
+body.on-light #lang-switch {
+  background: rgba(244,248,250,.85);
+  border-color: #A9C0CC;
+}
+body.on-light #lang-switch a {
+  color: var(--d-muted);
+}
+body.on-light #lang-switch a.active {
+  color: var(--d-teal);
+}
+body.on-light #lang-switch a:hover {
+  color: var(--d-teal);
+}
+@media(max-width:760px){
+  #lang-switch {
+    top: 12px;
+    right: 12px;
+    padding: 4px 8px;
+  }
+}
+
+
 /* ---------- language switcher ---------- */
 #lang-switch {
   position: fixed;
@@ -1153,7 +1189,9 @@ body.on-light #lang-switch a:hover {
 </head>
 <body>
 
-<div id="lang-switch" aria-label="Sélecteur de langue"><a href="index.html">EN</a><a href="index-fr.html" class="active">FR</a></div>
+<div id="lang-switch" aria-label="Sélecteur de langue"><a href="index.html">EN</a><a href="index-fr.html" class="active">FR</a><a href="index-de.html">DE</a><a href="index-nl.html">NL</a></div>
+
+
 
 
 
@@ -1291,6 +1329,23 @@ body.on-light #lang-switch a:hover {
         <div class="corridorHead">
           <div class="kicker">Le corridor</div>
           <h2>1 230&#8201;km. Quatre pays. <em>285 millions de tonnes par an.</em></h2>
+        </div>
+        <div class="orbit-modes reveal" style="display: flex; gap: 1.5rem; margin: 1rem 0; font-family: var(--font-m); font-size: 13px; letter-spacing: 0.1em; color: var(--ice);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--river-glow); box-shadow: 0 0 6px var(--river-glow);"></span>
+            Péniche
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--river-glow); box-shadow: 0 0 6px var(--river-glow);"></span>
+            Rail
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--river-glow); box-shadow: 0 0 6px var(--river-glow);"></span>
+            Route
+          </div>
+        </div>
+        <div class="orbit-route reveal" style="font-family: var(--font-m); font-size: 11px; letter-spacing: 0.15em; color: var(--mist); margin-bottom: 1.2rem; text-transform: uppercase;">
+          FR · DE · CH · NL — ROTTERDAM → BÂLE — 285M tonnes / an
         </div>
         <div class="statRow">
           <div class="chip"><div class="n">285M</div><div class="l">tonnes / an</div></div>
@@ -1487,24 +1542,7 @@ body.on-light #lang-switch a:hover {
         Éliminer les zones d'ombre sur l'ensemble du corridor du Rhin grâce à une intelligence des perturbations en temps réel.
       </p>
       
-      <div class="mode-select reveal" style="display: flex; gap: 2rem; margin-bottom: 2rem;">
-        <div style="display: flex; align-items: center; gap: 10px; font-family: var(--font-m); font-size: 14px;">
-          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--river-glow); box-shadow: 0 0 8px var(--river-glow);"></span>
-          Péniche
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px; font-family: var(--font-m); font-size: 14px;">
-          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--river-glow); box-shadow: 0 0 8px var(--river-glow);"></span>
-          Rail
-        </div>
-        <div style="display: flex; align-items: center; gap: 10px; font-family: var(--font-m); font-size: 14px;">
-          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--river-glow); box-shadow: 0 0 8px var(--river-glow);"></span>
-          Route
-        </div>
-      </div>
-      
-      <div class="tag reveal" style="font-family: var(--font-m); font-size: 11px; letter-spacing: 0.15em; color: var(--mist);">
-        FR · DE · CH · NL — ROTTERDAM → BÂLE — 285M tonnes / an
-      </div>
+
     </div>
     
     <div class="reveal" style="max-width: 400px; width: 100%; margin: 0 auto;">
